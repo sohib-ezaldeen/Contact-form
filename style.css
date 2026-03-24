@@ -1,0 +1,268 @@
+:root {
+  --Green-200: hsl(148, 38%, 91%);
+  --Green-600: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+  --Grey-500: hsl(186, 15%, 59%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-900: hsl(187, 24%, 22%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "karla";
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--Green-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.message-send {
+   
+  background-color: var(--Grey-900);
+  padding: 12px 10px;
+  border-radius:8px ;
+  
+}
+ .titel-message{
+display: flex;
+ align-items:  flex-end;
+ margin-bottom: 5px;
+ 
+}
+ .titel-message img{
+margin-right: 10px;
+ }
+ .titel-message span{
+  display: block;
+  color: var(--White);
+  font-size: 1rem;
+ }
+  .message-send p{
+    color: var(--Grey-500);
+  }
+main {
+  max-width: 600px;
+  width: 100%;
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+ 
+}
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+    padding: 20px;
+  }
+  main {
+    max-width: 375px;
+    margin: 20px 0px;
+    border-radius: 15px;
+  }
+}
+input {
+  outline: none;
+  border: none;
+  border: 1px solid var(--Grey-500);
+  border-radius: 5px;
+}
+input:focus,
+textarea:focus {
+  border-color: var(--Green-600);
+}
+main h1 {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.box-name {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .box-name {
+    margin-top: 0;
+    flex-direction: column;
+      gap: 0;
+  }
+  .box-name .first-name,
+  .box-name .last-name {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+.box-name .first-name,
+.box-name .last-name {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  flex: 1;
+}
+.box-name input {
+  width: 100%;
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+.box-name input:focus {
+  border-color: var(--Green-600);
+}
+.box-name label {
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+  color: var(--Grey-900);
+}
+span {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: var(--Red);
+  transition: 0.5s;
+}
+
+.box-email {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.box-email input {
+  padding: 10px 5px;
+  width: 100%;
+}
+
+.box-email label {
+  font-size: 0.8rem;
+  color: var(--Grey-900);
+  margin-bottom: 8px;
+}
+
+fieldset {
+  margin-top: 10px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  fieldset {
+    width: 100%;
+    row-gap: 20px;
+  }
+}
+fieldset legend {
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  color: var(--Grey-900);
+}
+fieldset label {
+  display: flex;
+  align-items: center;
+  flex: 2;
+  padding: 10px 15px;
+  border: 1px solid var(--Grey-500);
+  border-radius: 5px;
+  color: var(--Grey-900);
+  cursor: pointer;
+}
+fieldset label:hover {
+  border-color: var(--Grey-900);
+  cursor: pointer;
+}
+fieldset label input[type="radio"] {
+  margin-right: 15px;
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+fieldset label:has(input[type="radio"]:checked) {
+  border-color: var(--Green-600);
+  background-color: var(--Green-200);
+}
+fieldset span {
+  display: block;
+  width: 100%;
+  margin-top: -10px;
+}
+.box-massage {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.box-massage label {
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  color: var(--Grey-900);
+}
+.box-massage textarea {
+  resize: none;
+  height: 80px;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  border: 1px solid var(--Grey-500);
+}
+.box-massage textarea:focus {
+  border-color: var(--Green-600);
+}
+ 
+
+.box-consent {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.box-consent input[type="checkbox"] {
+  margin-right: 10px;
+}
+.box-consent label {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  width: 100%;
+}
+.box-consent label:hover {
+  cursor: pointer;
+  color: var(--Green-600);
+}
+.box-consent label:has(input[type="checkbox"]:checked) {
+  color: var(--Green-600);
+}
+.box-consent span {
+  width: 100%;
+}
+main button {
+  margin-top: 1dvh;
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  background-color: var(--Green-600);
+  color: var(--White);
+}
+main button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+.none {
+  opacity: 0;
+}
+.show {
+  opacity: 1;
+}
+.border-error {
+  border-color: var(--Red);
+}
+.nones{
+  display: none;
+}
