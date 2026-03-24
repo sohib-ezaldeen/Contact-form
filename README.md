@@ -10,7 +10,7 @@ A modern, fully responsive **Contact Form** built with **HTML, CSS, and Vanilla 
 👉 https://sohib-ezaldeen.github.io/Contact-form/
 
 💻 **GitHub Repository:**
-👉 https://github.com/your-username/contact-form
+👉 https://github.com/sohib-ezaldeen/contact-form
 
 ---
 
